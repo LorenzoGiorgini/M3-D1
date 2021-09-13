@@ -11,7 +11,14 @@ function sumOfTwo(a , b) {
 console.log(sumOfTwo(2, 2))
 
 /* 2. Create a function to check two given integers. Return `true` if one of them is 50 or if their sum is 50. */
+function checkNum(a , b) {
+    let sum = a + b
+   if(a === 50 || b === 50 || sum === 50) {
+    return true
+   } else return false
+}
 
+/* console.log(checkNum(51 , 1)) */
 
 
 /* 3. Create a function to remove a character at a specified position from a given string: pass the position and the string as parameters, return the new string. */
