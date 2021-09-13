@@ -233,7 +233,16 @@ function upperCased(str) {
 
 /* 17. Create a function to calculate the sum of two integers (passed as parameters). 
     If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
+function sumRange(a, b) {
+    let sum = a + b
+    if (sum >= 50 && sum <= 80) {
+        return 65
+    } else {
+        return 80
+    }
+}
 
+/* console.log(sumRange(50,50)) */
 
 /* 18. Create a function to convert a number (passed as a parameter) into a string, basing yourself on this example: 
     The number has 3 as a factor ⇒ return `Diego`
@@ -246,3 +255,15 @@ Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
 
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
+
+function acronym(arr){
+    let str = ''
+    
+    for(let i = 0; i < arr.length; i++){
+        str += arr[i][0]
+    }
+    
+    return str
+}
+
+console.log(acronym(["British" , "Broadcasting", "Corporation"]))
