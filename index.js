@@ -63,7 +63,15 @@ function inRange(a, b) {
 
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
+function repeatString(num , str) {
+    let newString = ""
+    for (let i = 0; i < num; i++) {
+        newString += str
+    }
+    return newString
+}
 
+/* console.log(repeatString(3 , "strive ")) */
 
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
