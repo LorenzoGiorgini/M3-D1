@@ -75,11 +75,30 @@ function repeatString(num , str) {
 
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
+function cityNames(city) {
+    let newCity = city.toLowerCase()
+    if (newCity.includes("new") || newCity.includes("los")) {
+        console.log(city)
+        return true
+    } else {
+        return false
+    }
+}
+
+/* console.log(cityNames("Los york")) */
 
 
 /* 8. Create a function to calculate and return the sum of all elements from an array with 3 elements. 
     Pass the array as a parameter. */
+function sumArr(_array) {
+    let sum = 0
+    for (let i = 0; i < _array.length; i++) {
+        sum += _array[i]
+    }
+    return sum
+}
 
+/* console.log(sumArr([1, 2023, 5])) */
 
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
     Return `true` is it does, `false` if it doesn't. */
