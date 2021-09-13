@@ -8,7 +8,7 @@ function sumOfTwo(a , b) {
     }
 }
 
-console.log(sumOfTwo(2, 2))
+/* console.log(sumOfTwo(2, 2)) */
 
 /* 2. Create a function to check two given integers. Return `true` if one of them is 50 or if their sum is 50. */
 function checkNum(a , b) {
@@ -23,13 +23,43 @@ function checkNum(a , b) {
 
 /* 3. Create a function to remove a character at a specified position from a given string: pass the position and the string as parameters, return the new string. */
 
+function delChar(pos , str) {
+    let newStr = str.substring(pos)
+    return newStr
+}
+
+/* console.log(delChar(1, "hello")) */
+
 
 /* 4. Create a function to find and return the largest of three given integers. */
+function maxNum(a , b , c) {
+    max = 0
+    for (let i = 0; i < 3; i++) {
+        if (a > max) {
+            max = a
+        } if (b > max) {
+            max = b
+        } if (c > max) {
+            max = c
+        }
+        return max
+    }
+}
+
+/* console.log(maxNum(10 , 1099 , 1)) */
 
 
 /* 5. Create a function to check if two numbers are in the range 40-60 or 70-100. 
     Return `true` if they do, return `false` if one (or both) don't. */
+function inRange(a, b) {
+    if ((a >= 40 && a <= 60 || b >= 40 && b <= 60) && (a >= 70 && a <= 100 || b >= 70 && b <= 100)) {
+        return true
+    } else {
+        return false
+    }
+}
 
+/* console.log(inRange(20 , 99)) */
 
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
