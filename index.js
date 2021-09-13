@@ -102,18 +102,47 @@ function sumArr(_array) {
 
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
     Return `true` is it does, `false` if it doesn't. */
+function checkNumberInArr(_array) {
+    for (let i = 0; i < 2; i++) {
+        if ((_array[i] === 1) || (_array[i] === 3)) {
+            return true
+        }
+    }
+    return false
+}
+/* console.log(checkNumberInArr([200 , 200])) */
 
 
 /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
     Return `true` if it doesn't, `false` if it does. */ 
-
+    function checkNumberInArr(_array) {
+        for (let i = 0; i < 2; i++) {
+            if ((_array[i] === 1) || (_array[i] === 3)) {
+                return false
+            }
+        }
+        return true
+    }
+/* console.log(checkNumberInArr([1 , 3])) */
 
 /* 11. Create a function to find the longest string from a given array of strings. 
     Pass the array as parameter and return the longest string. */ 
+function longestString(str) {
+    let longest = 0
+    let longer
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].length > longest) {
+            longest = str[i].length
+            longer = str[i]
+        }
+    }
+    return longer
+}
 
+/* console.log(longestString(["mid" , "longstring" , "short"])) */
 
 /* 12. Create a function to find the types of a given angle:
-  1. Acute angle ⇒ between 0 and 90 degrees. Return `acute`.
+    1. Acute angle ⇒ between 0 and 90 degrees. Return `acute`.
     2. Right angle ⇒ 90 degree. Return `right`
     3. Obtuse angle ⇒ between 90 and 180. Return `obtuse`
     4. Straight angle ⇒ 180 degrees. Return `straight`
@@ -121,20 +150,86 @@ function sumArr(_array) {
     Pass the angle as a parameter.
 */
 
+function angles(_angle) {
+    let type
+    if (_angle >= 0 && _angle < 90) {
+        type = "acute"
+    } else if (_angle === 90) {
+        type = "right"
+    } else if (_angle >= 90 && _angle < 180) {
+        type = "obtuse"
+    } else if (_angle === 180) {
+        type = "straight"
+    } else {
+        type = "error"
+    }
+    return type
+}
+/* console.log(angles(90)) */
 
 /* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
+function indexOfMax(arr) {
+    let max = arr[0];
+    let maxIndex = 0;
 
+    Math.floor(arr)
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+    return maxIndex;
+}
+
+/* console.log(indexOfMax([13535535.424, 14324, 3534535353])) */
 
 /* 14. Create a function to find and return the largest **even** number from an array of integers that is passed a parameter. */
+function largestEven(arr) {
+    let max = arr[0];
+    let maxIndex = 0;
+    Math.floor(arr)
 
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            if (arr[i] % 2 === 0) {
+                maxIndex = i;
+                max = arr[i];
+            } else {
+                return false
+            }
+        }
+    }
+    return maxIndex;
+}
+
+/* console.log(largestEven([13, 23, 13])) */
 
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative. 
     Return `true` if that's the case, return `false` if it's not. */
+function posNeg(a , b) {
+    if ( a >= 0 || b >= 0) {
+        return true
+    } else {
+        return false
+    }
+}
 
+/* console.log(posNeg(-1 , -30)) */
 
 /* 16. Create a function to create and return a new string where the first 3 characters and in lower case and the others are in upper case. 
     If the string's length is less than 3, convert the whole string into uppercase. Pass the original string as a parameter. */
-
+function upperCased(str) {
+    if (str.length > 3) {
+        let first = (str.substring(0, 3)).toLowerCase();
+        let last = str.substring(3, str.length).toUpperCase();  
+        return first + last
+    } if (str.length <= 3) {
+        return  str.toUpperCase();
+    }
+}
+/* console.log(upperCased("javascript")) */
 
 /* 17. Create a function to calculate the sum of two integers (passed as parameters). 
     If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
